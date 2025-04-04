@@ -3,9 +3,10 @@
 
 
 body {
-    margin: 0 auto;
     user-select: none;
     overflow-x: hidden;
+    margin: 0 auto;
+    padding: 0 auto;
 }
 
 h2 {
@@ -623,25 +624,28 @@ footer {
     line-height: 25px;
 }
 
-@media screen and (max-width: 575px) {
+@media screen and (min-width: 200px) and (max-width: 575px) {
     body {
         overflow-x: hidden;
     }
-
-    .hero {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: space-between;
-        position: relative;
-        height: 800px;
-        background: var(--basic, #7036BA);
-        overflow: hidden;
-        border-bottom: 2px solid white;
-    }
     
     #nav {
-        width: 400px !important;
+        max-width: 300px !important;
+    }
+    .hero {
+        height: 400px;
+    }
+
+    .hero-text {
+        height: 200px;
+    }
+
+    .navbar-toggler {
+        display: none;
+    }
+
+    .navbar-nav a {
+        display: none;
     }
     
     .hero-content {
@@ -652,31 +656,65 @@ footer {
         width: 400px;
     }
     
-    .hero-foto {
-        width: 400px;
-    }
-    
-    .hero-title {
-    }
-    
-    .hero-descriptrion {
-    }
-    
-    .hero-button {
+    .hero-foto img {
+        width: 400px !important;
     }
 
+    .feedback {
+        max-width: 400px;
+    }
+
+    .feedback-content {
+        max-width: 350px;
+    }
+
+    .feedback-title {
+        width: 300px;
+        margin-top: -50px;
+    }
+
+    .feedback-cards {
+        flex-direction: column;
+    }
+
+    .feedback-card {
+        width: 350px;
+        margin-left: -15px;
+    }
+    
+
     .about-img {
-        width: 400px;
+        width: 100%;
         margin-top: 15px;
+    }
+
+    .howTo-content {
+        height: 500px;
     }
     
     .phowTo-p {
-        width: 400px;
+        width: 18%;
     }
 
     .steps-arrow {
         width: 100px;
         opacity: 0;
+    }
+
+    .faq {
+        overflow: hidden;
+    }
+
+    .accordion {
+        max-width: 330px;
+    }
+
+    .accordion-button {
+        max-width: 330px;
+    }
+
+    .accordion-collapse {
+        max-width: 330px;
     }
     
     .steps {
@@ -704,13 +742,44 @@ footer {
         text-align: center;
     }
 
+    .pricing {
+        width: 94vw;
+    }
+
+    .pricing-title {
+        margin-top: -70px;
+    }
+
+    .pricing-content {
+        max-width: 96vw;
+    }
+
+    .tariffs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 342px;
+        z-index: 100;
+    }
+
+    .tariff {
+        margin-left: 35px;
+    }
+
     input {
-        width: 400px !important;
+        width: 100% !important;
     }
     
     .sigIn-p {
-        width: 400px;
+        width: 350px;
     }
+
+    .phone, .name {
+        width: 300px;
+    }
+
+
 
     footer {
         height: 200px;
@@ -724,17 +793,68 @@ footer {
     }
 }
 
-/* Small пристрої (≥576px) */
-@media screen and (min-width: 576px) {}
+@media screen and (min-width: 576px) and (max-width: 1000px) {
 
-/* Medium пристрої (≥768px) */
-@media screen and (min-width: 768px) {}
+    .navbar-brand {
+        display: none;
+    }
 
-/* Large пристрої (≥992px) */
-@media screen and (min-width: 992px) {}
-
-/* Extra large пристрої (≥1200px) */
-@media screen and (min-width: 1200px) {}
-
-/* Extra extra large пристрої (≥1400px) */
-@media screen and (min-width: 1400px) {}
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+    }
+    .hero-text {
+        height: 600px;
+        margin-left: -300px;
+        margin-bottom: -50px;
+    }
+    .about-video {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+    .about-img {
+        width: 45%;
+    }
+    .howToStart {
+        height: 700px;
+    }
+    .phowTo-p {
+        width: 800px;
+    }
+    .steps {
+        display: flex;
+        flex-direction: column;
+    }
+    .steps-arrow {
+        rotate: 90deg;
+        margin: 25px 0;
+    }
+    .features-box {
+        width: 800px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .feedback {
+        max-width: 800px;
+    }
+    .feedback-content {
+        max-width: 800px;
+    }
+    .feedback-cards {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .pricing-content {
+        width: 800px;
+    }
+    .tariffs {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 800px;
+    }
+}
